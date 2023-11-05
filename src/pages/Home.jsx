@@ -1,8 +1,12 @@
+import Footer from "./Footer";
 
 const Home = () => {
     return (
         <div>
-            <h1>This Home Page</h1>
+            <div className="w-full h-screen">
+                this heder
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

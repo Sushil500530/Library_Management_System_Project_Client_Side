@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import sidePhoto from '../assets/image/animation_lokavq09_large.gif'
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 
 
@@ -18,9 +19,28 @@ const Resister = () => {
     const handleResister = async(e) => {
         e.preventDefault();
         const toastId = toast.loading('resister proccessing....');
+        if (password.length < 6) {
+            return  toast.error("password should be at least 6 character or longer",{ id: toastId });
+        }
+        else if (!/[A-Z]/.test(password)) {
+            return toast.error('your password should have at least one uppercase characters.', { id: toastId });
+        }
+        // eslint-disable-next-line no-useless-escape
+        else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\|\-]/.test(password)) {
+            return toast.error("you should be at least one special character", { id: toastId });
+        }
        await createUser(email,password)
         .then(result => {
             console.log(result.user);
+            updateProfile(result.user, {
+                displayName: name,
+                photoURL: "https://i.ibb.co/Jt0tPSh/user.png"
+            })
+            .then(() => {})
+            .catch(error => {
+                console.error(error);
+            })
+            
             if(result.user){
                 toast.success('resister successfully....!',{ id: toastId });
                 navigate('/login')
@@ -36,7 +56,7 @@ const Resister = () => {
     return (
         <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1400px] lg:h-screen">
             <div className=" w-full h-screen py-12">
-            <h3 className="text-2xl font-semibold pt-8 text-center pb-12 lg:pb-0 text-white">Please Resister Now</h3>
+            <h3 className="text-2xl font-semibold text-black lg:text-white text-center pb-12">Please Resister Now</h3>
                 <div className='container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-0 md:flex-col lg:flex-row'>
                     <div className="w-full h-[550px] lg:w-1/2 p-5">
                         <img src={sidePhoto} className="w-full h-full rounded-md" alt="" />
