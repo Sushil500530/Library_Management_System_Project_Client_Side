@@ -1,10 +1,27 @@
 
 import { createBrowserRouter } from 'react-router-dom';
+import Resister from '../pages/Resister';
+import Login from '../pages/Login';
+import Header from '../components/header/Header';
 
 const MainRouter = createBrowserRouter([
     {
         path:'/',
-        element: <div className='text-3xl font-bold text-center my-5'>hellow world</div>
+        element: <Header></Header>,
+        children:[
+            {
+                path:'/',
+               
+            }
+        ]
+    },
+    {
+        path:'/resister',
+        element:<Resister></Resister>
+    },
+    {
+        path:'/login',
+        element:<Login></Login>
     }
 ])
 

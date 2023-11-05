@@ -1,9 +1,12 @@
 
 const Navbar = () => {
+    const navLinks = <>
+     <li><a>Home</a></li>
+    </>
     return (
-        <div>
-            
-        </div>
+       <div>
+        
+       </div>
     );
 };
 
