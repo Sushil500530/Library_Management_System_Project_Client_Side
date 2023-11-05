@@ -5,32 +5,32 @@ const Navbar = () => {
         <NavLink
             to="/"
             className={({ isActive }) =>
-                isActive ? 'btn bg-purple-500 btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
+                isActive ? 'btn bg-purple-500 btn-sm hover:border text-white border-purple-500 hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
             }>
             Home
         </NavLink>
         <NavLink
             to="/add-book"
             className={({ isActive }) =>
-                isActive ? 'btn bg-purple-500 btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
+                isActive ? 'btn bg-purple-500 btn-sm text-white border-purple-500 hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
             }>
             Add Book
         </NavLink>
         <NavLink
-            to="/all-book"
+            to="/all-books"
             className={({ isActive }) =>
-                isActive ? 'btn bg-purple-500 btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
+                isActive ? 'btn bg-purple-500 btn-sm text-white border-purple-500 hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'
             }>
-            Book Books
+            All Books
         </NavLink>
         <NavLink
             to="/borrow-books"
             className={({ isActive }) =>
-                isActive ? 'btn bg-purple-500 btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'}>
+                isActive ? 'btn bg-purple-500 btn-sm hover:border text-white border-purple-500 hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'}>
             Borrow Books
         </NavLink>
         <NavLink to="/login" className={({ isActive }) =>
-            isActive ? 'btn bg-purple-500 btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'}>
+            isActive ? 'btn bg-purple-500 btn-sm hover:border text-white border-purple-500 hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'}>
             Loign
         </NavLink>
         {/* {user?.email ? (
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex ">
                     {/* Navbar */}
-                    <nav className="bg-base-300 w-full">
+                    <nav className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full">
                         <div className="navbar lg:container lg:mx-auto flex flex-row-reverse lg:flex-row">
                             <div className="flex-none lg:hidden">
                                 <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
@@ -66,7 +66,7 @@ const Navbar = () => {
                             </div>
                             <div className="flex-none hidden lg:block">
                                 <ul className="menu menu-horizontal">
-                                    <div className="flex gap ">
+                                    <div className="flex gap-2">
                                         {
                                             navLinks
                                         }
