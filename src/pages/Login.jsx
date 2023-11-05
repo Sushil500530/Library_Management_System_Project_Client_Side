@@ -8,8 +8,8 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
     const [showPassword,setShowPassword] = useState('');
     return (
-        <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1800px] md:h-[1600px] lg:h-screen">
-        <div className=" w-full h-screen text-white py-12">
+        <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1800px] md:h-[1600px] lg:h-[93vh] bg-fixed">
+        <div className=" w-full text-white">
         <h3 className="text-2xl font-semibold pt-8 text-center pb-12 lg:pb-5">Please Login Now</h3>
             <div className='container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-0 md:flex-col lg:flex-row'>
                 <div className="w-full h-[550px] lg:w-1/2 p-5">

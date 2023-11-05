@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Resister from '../pages/Resister';
 import Login from '../pages/Login';
 import Header from '../components/header/Header';
+import BorrowBooks from '../pages/BorrowBooks';
 
 const MainRouter = createBrowserRouter([
     {
@@ -10,8 +11,12 @@ const MainRouter = createBrowserRouter([
         element: <Header></Header>,
         children:[
             {
-                path:'/',
-               
+                path:'/borrow-books',
+               element:<BorrowBooks></BorrowBooks>
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
             }
         ]
     },
@@ -19,10 +24,7 @@ const MainRouter = createBrowserRouter([
         path:'/resister',
         element:<Resister></Resister>
     },
-    {
-        path:'/login',
-        element:<Login></Login>
-    }
+  
 ])
 
 export default MainRouter;
