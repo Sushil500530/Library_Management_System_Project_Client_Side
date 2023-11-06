@@ -3,8 +3,8 @@ import logo2 from '../../assets/logo/wired-flat-1505-radio-walkie-talkie.gif'
 import logo3 from '../../assets/logo/wired-flat-18-location-pin.gif'
 const Collection = () => {
     return (
-        <div className='container mx-auto my-12 space-y-8'>
-            <h1 className="text-2xl lg:text-4xl font-bold text-center">Our Services and Location State</h1>
+        <div className='container mx-auto lg:mt-12 lg:mb-16 my-5'>
+            <h1 className="text-2xl lg:text-4xl font-bold text-center mb-8">Our Services and Location State</h1>
             <div className='bg-transparen w-full h-[150px] flex items-center justify-between px-12 border border-purple-500'>
                 <div className='flex item-center justify-center text-white'>
                     <div className='w-16 h-16'>

@@ -14,7 +14,7 @@ const AllBooks = () => {
         /></p>
     }
     return (
-        <div className="bg-blue-50">
+        <div className="dark:bg-zinc-900 dark:text-white">
             <div className="w-full container mx-auto pb-12">
                 <h1 className="text-2xl font-bold text-center">Book items : {categories.length} </h1>
                 <div className="flex items-center justify-end py-5 px-2">

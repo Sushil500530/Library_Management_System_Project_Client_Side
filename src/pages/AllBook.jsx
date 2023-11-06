@@ -5,7 +5,7 @@ const AllBook = ({books}) => {
     const {_id,image,name,author_name,quantity,category,description} = books || {};
     return (
         <div>
-            <div className="card card-compact w-full bg-base-100 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">
+            <div className="card card-compact w-full bg-base-100 dark:bg-zinc-800 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">
                 <div className="w-full h-[250px] lg:h-[320px] rounded-md">
                     <img src={image} alt="image" className="w-full h-full rounded-md" />
                 </div>
@@ -21,9 +21,8 @@ const AllBook = ({books}) => {
                     <h1 className="text-base font-semibold">Author Name: {author_name}</h1>
                     <p className="text-base font-semibold capitalize">Category: {category}</p>
                     <p className="text-base font-semibold">Quantity: {quantity}</p>
-                    <p>{description.slice(0,80)}</p>
                     <Link to={`/updated-book/${_id}`}>
-                        <div className="card-actions">
+                        <div className="card-actions mt-3">
                             <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Update Now</button>
                         </div>
                     </Link>

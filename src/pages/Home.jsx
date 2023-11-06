@@ -4,6 +4,7 @@ import ClientService from "./ClientService";
 import Footer from "./Footer";
 import Collection from "./otherCategory/Collection";
 import DifferCate from "./otherCategory/DifferCate";
+import DifferCate2 from "./otherCategory/DifferCate2";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                 <Book />
                 <Collection></Collection>
                 <DifferCate></DifferCate>
+                <DifferCate2></DifferCate2>
             </div>
             <ClientService></ClientService>
             <Footer></Footer>

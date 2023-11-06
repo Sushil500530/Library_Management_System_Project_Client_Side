@@ -41,37 +41,37 @@ const UpdatedBook = () => {
             <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1100px] md:h-[760px] lg:h-[90vh] bg-fixed">
                 <h3 className="text-center lg:text-white py-8 text-3xl font-bold">Update Your <span className='text-purple-500 font-bold'>Book</span>.... <span className="text-4xl font-bold text-purple-500">!</span></h3>
                 <div className="pt-5">
-                    <div className="lg:w-1/2 w-full mx-auto shadow-lg bg-blue-50">
+                    <div className="lg:w-1/2 w-full mx-auto shadow-lg bg-blue-50 dark:bg-zinc-900 ">
                         <form onSubmit={handleUpdated} className="card-body">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 font-semibold text-base">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 font-semibold text-base dark:text-black">
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Name</span>
+                                        <span className="label-text dark:text-white">Name</span>
                                     </label>
                                     <input type="text" defaultValue={name} name="name" placeholder="Book Name"
                                         className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">image Url</span>
+                                        <span className="label-text dark:text-white">image Url</span>
                                     </label>
                                     <input type="url" name="imageUrl" defaultValue={image} className="input input-bordered" placeholder="given image URL" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Quantity</span>
+                                        <span className="label-text dark:text-white">Quantity</span>
                                     </label>
                                     <input type="number" name="quantity" defaultValue={quantity} placeholder="quantity" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Athor Name</span>
+                                        <span className="label-text dark:text-white">Athor Name</span>
                                     </label>
                                     <input type="text" name="athorName" defaultValue={author_name} className="input input-bordered" placeholder="author name" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Category</span>
+                                        <span className="label-text dark:text-white">Category</span>
                                     </label>
                                     <select className="input input-bordered" name="category" id="">
                                         {categories?.map((category) => (
@@ -84,14 +84,14 @@ const UpdatedBook = () => {
                                 </div>
                                 <div className="form-control font-semibold text-base">
                                     <label className="label">
-                                        <span className="label-text">Ratting</span>
+                                        <span className="label-text dark:text-white">Ratting</span>
                                     </label>
                                     <input type="number" name="ratting" defaultValue={ratting} className="input input-bordered" placeholder="ratting" required />
                                 </div>
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Short Description</span>
+                                    <span className="label-text font-semibold dark:text-white">Short Description</span>
                                 </label>
                                 <textarea className="textarea textarea-bordered w-full" type="text" name="description" defaultValue={description.slice(0, 80)} placeholder="description"></textarea>
                             </div>

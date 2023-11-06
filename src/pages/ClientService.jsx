@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const ClientService = () => {
     return (
-        <div className="my-12 container mx-auto">
+        <div className="my-12 container mx-auto dark:text-white">
             <h2 className="text-4xl my-8 text-center font-bold">Our <span className="text-violet-500">Clients</span></h2>
             <Marquee speed={100} pauseOnHover={true} className="w-[100%]">
                 <div className="w-[450px] flex flex-col items-center cursor-pointer border px-5 py-8 justify-center space-y-3 mr-8 ">
