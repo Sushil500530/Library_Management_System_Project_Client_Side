@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import BorrowBookRow from "./BorrowBookRow";
 
 const BorrowBooks = () => {
     const secureAxios = useAxiosSecure();
     const {user} = useAuth();
     const [borrowing,setBorrowing] = useState([]);
+    const url = `/borrow-books?email=${user?.email}`;
+    useEffect(() => {
+        secureAxios?.get(url)
+        .then(res => setBorrowing(res?.data))
+    },[secureAxios,url])
+    console.log(borrowing, user);
     return (
         <div>
             <div className="container mx-auto pt-5 lg:pt-12 dark:text-white">
@@ -20,10 +27,18 @@ const BorrowBooks = () => {
                                 <th>User Name</th>
                                 <th>Email</th>
                                 <th>Borrow Date</th>
-                                <td><button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in capitalize text-[18px] hover:text-purple-700 font-semibold dark:hover:text-white">Return Book</button></td>
+                                <td>Return Date</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
-                     
+                        <tbody className="font-semibold">
+                            {
+                                borrowing?.map(borrow => <BorrowBookRow
+                                key={borrow._id}
+                                borrowBook={borrow}
+                                ></BorrowBookRow>)
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>

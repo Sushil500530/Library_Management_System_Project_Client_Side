@@ -27,7 +27,7 @@ const SingleBookDetails = () => {
             date
          }
         console.log(borrowDoc);
-        axios.post('http://localhost:5000/borrow-book', borrowDoc)
+        axios.post('http://localhost:5000/borrow-books', borrowDoc)
         .then((res) => console.log(res.data))
     }
 
