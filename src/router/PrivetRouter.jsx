@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { RotatingLines } from "react-loader-spinner";
 
 const PrivetRouter = ({children}) => {
     const {user,isLoading} = useAuth();
+    const location = useLocation();
     console.log(user);
     if(isLoading){
         return <p className="flex items-center justify-center w-full h-[50vh]"><RotatingLines
@@ -18,6 +19,6 @@ const PrivetRouter = ({children}) => {
     if(user){
         return children;
     }
-    return <Navigate state={location.pathname} to="/login"></Navigate>
+    return <Navigate state={location.pathname} to='/login' replace ></Navigate>
 }
 export default PrivetRouter;

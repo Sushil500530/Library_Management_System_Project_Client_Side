@@ -7,6 +7,7 @@ import BorrowBooks from '../pages/BorrowBooks';
 import Home from '../pages/Home';
 import PrivetRouter from './PrivetRouter';
 import AddBook from '../pages/AddBook';
+import Category from '../pages/Category';
 
 const MainRouter = createBrowserRouter([
     {
@@ -18,20 +19,25 @@ const MainRouter = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/add-book',
+                path: 'add-book',
                 element: <AddBook></AddBook>
             },
             {
-                path: '/all-books',
+                path: 'all-books',
                 element: <PrivetRouter><BorrowBooks></BorrowBooks></PrivetRouter>
             },
             {
-                path: '/borrow-books',
+                path: 'borrow-books',
                 element: <BorrowBooks></BorrowBooks>
             },
             {
-                path: '/login',
+                path: 'login',
                 element: <Login></Login>
+            },
+            {
+                path:'/collection/:category',
+                element:<Category></Category>,
+                loader: ({params}) => fetch(`http://localhost:5000/category-collection/${params.category}`)
             }
         ]
     },
