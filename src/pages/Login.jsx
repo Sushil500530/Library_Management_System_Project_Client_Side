@@ -74,7 +74,7 @@ const Login = () => {
                             </span>
                             <p className="text-white underline"><Link to="#">Forget Password</Link></p>
                         </div>
-                        <button className="btn bg-blue-600 border-none text-white hover:text-black text-[18px] w-full capitalize font-semibold">Login</button>
+                        <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Login</button>
                         <h2 className="font-bold text-center">Don't have an account? <Link to='/resister' className="text-blue-600 hover:underline ">Create an account</Link></h2>
                     </form>
                     <div className="inline-flex items-center justify-center w-full lg:hidden block">

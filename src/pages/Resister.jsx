@@ -82,7 +82,7 @@ const Resister = () => {
                                     }
                                 </span>
                             </div>
-                            <button className="btn bg-blue-600 border-none text-white hover:text-black text-[18px] w-full capitalize font-semibold">Resister</button>
+                            <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Resister</button>
                             <h2 className="font-bold text-center">Already Have an Account? <Link to='/login' className="text-blue-600 hover:underline ">Please Login</Link></h2>
                         </form>
                     </div>

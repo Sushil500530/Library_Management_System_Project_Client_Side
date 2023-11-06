@@ -8,6 +8,7 @@ import Home from '../pages/Home';
 import PrivetRouter from './PrivetRouter';
 import AddBook from '../pages/AddBook';
 import Category from '../pages/Category';
+import SingleBookDetails from '../pages/SingleBookDetails';
 
 const MainRouter = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ const MainRouter = createBrowserRouter([
                 path:'/collection/:category',
                 element:<Category></Category>,
                 loader: ({params}) => fetch(`http://localhost:5000/category-collection/${params.category}`)
+            },
+            {
+                path:'/book-details/:id',
+                element:<SingleBookDetails></SingleBookDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
             }
         ]
     },

@@ -69,7 +69,7 @@ const AddBook = () => {
                                 <input type="number" name="ratting" defaultValue='' className="input input-bordered" placeholder="ratting" required />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn bg-purple-500 hover:text-black btn-block text-[18px] text-white capitalize" type="submit" value="Add Book" />
+                                <input className="btn bg-purple-500 border text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full" type="submit" value="Add Book" />
                             </div>
                         </form>
                     </div>
