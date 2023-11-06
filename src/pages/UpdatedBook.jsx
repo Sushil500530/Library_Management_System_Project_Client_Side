@@ -9,8 +9,8 @@ const UpdatedBook = () => {
     const { data: categories } = useAxios()
     const data = useLoaderData();
     const navigate = useNavigate();
-    const {_id, image, name, author_name, quantity, ratting, description } = data || {};
-    const handleUpdated = async(e) => {
+    const { _id, image, name, author_name, quantity, ratting, description } = data || {};
+    const handleUpdated = async (e) => {
         e.preventDefault();
         const form = e.target;
         const updateBook = {
@@ -26,15 +26,15 @@ const UpdatedBook = () => {
         const responeData = await axios.put(`http://localhost:5000/category-collection/drama/${_id}`, updateBook)
         const data = await responeData.data;
         console.log(data);
-        if(data.modifiedCount > 0) {
+        if (data.modifiedCount > 0) {
             Swal.fire({
                 title: "Updated Successfully!",
                 text: "You clicked the button!",
                 icon: "success"
-              });
+            });
             return navigate('/all-books')
         }
-        
+
     }
     return (
         <div>
@@ -76,7 +76,7 @@ const UpdatedBook = () => {
                                     <select className="input input-bordered" name="category" id="">
                                         {categories?.map((category) => (
                                             <option className=""
-                                            key={categories._id} defaultValue={category.category}>
+                                                key={categories._id} defaultValue={category.category}>
                                                 {category.category}
                                             </option>
                                         ))}
@@ -91,13 +91,12 @@ const UpdatedBook = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Short Description</span>
+                                    <span className="label-text font-semibold">Short Description</span>
                                 </label>
-                                {/* <input type="text" name="description" defaultValue={description} className="input input-bordered" placeholder="description" required /> */}
-                                <textarea className="textarea textarea-bordered w-full" type="text" name="description" defaultValue={description.slice(0,80)} placeholder="description"></textarea>
+                                <textarea className="textarea textarea-bordered w-full" type="text" name="description" defaultValue={description.slice(0, 80)} placeholder="description"></textarea>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn bg-purple-500 border text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full" type="submit" value="Add Book" />
+                                <input className="btn bg-purple-500 border text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full" type="submit" value="Updated Book" />
                             </div>
                         </form>
                     </div>

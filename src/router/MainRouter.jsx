@@ -10,10 +10,12 @@ import Category from '../pages/Category';
 import SingleBookDetails from '../pages/SingleBookDetails';
 import AllBooks from '../pages/AllBooks';
 import UpdatedBook from '../pages/UpdatedBook';
+import ErrorPage from '../pages/ErrorPage';
 
 const MainRouter = createBrowserRouter([
     {
         path: '/',
+        errorElement: <ErrorPage></ErrorPage>,
         element: <Header></Header>,
         children: [
             {

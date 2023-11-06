@@ -1,3 +1,4 @@
+import axios from "axios";
 import Footer from "./Footer";
 
 const AddBook = () => {
@@ -5,7 +6,7 @@ const AddBook = () => {
     const handleAddBook = (e) => {
         e.preventDefault();
         const form = e.target;
-        const addBook = {
+        const collectedBook = {
             name: form.name.value || "not to given",
             image: form.imageUrl.value || "not to given",
             author_name: form.athorName.value || "not to given",
@@ -14,7 +15,9 @@ const AddBook = () => {
             description: form.description.value || "not to given",
             ratting: form.ratting.value || "not to given",
         }
-        console.log(addBook);
+        console.log(collectedBook);
+        axios.post('http://localhost:5000/book-category', collectedBook)
+        .then(res => console.log(res.data))
     }
     return (
         <div>
@@ -55,18 +58,18 @@ const AddBook = () => {
                                     </label>
                                     <input type="text" name="category" defaultValue='' className="input input-bordered" placeholder="category" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control font-semibold text-base">
                                     <label className="label">
-                                        <span className="label-text">Short Description</span>
+                                        <span className="label-text">Ratting</span>
                                     </label>
-                                    <input type="text" name="description" defaultValue='' className="input input-bordered" placeholder="description" required />
+                                    <input type="number" name="ratting" defaultValue='' className="input input-bordered" placeholder="ratting" required />
                                 </div>
                             </div>
-                            <div className="form-control font-semibold text-base">
+                            <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Ratting</span>
+                                    <span className="label-text font-semibold">Short Description</span>
                                 </label>
-                                <input type="number" name="ratting" defaultValue='' className="input input-bordered" placeholder="ratting" required />
+                                <textarea className="textarea textarea-bordered w-full" type="text" name="description" placeholder="description"></textarea>
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn bg-purple-500 border text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full" type="submit" value="Add Book" />

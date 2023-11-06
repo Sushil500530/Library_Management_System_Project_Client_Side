@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const AllBook = ({books}) => {
-    const {_id,image,name,author_name,quantity,category,ratting,description} = books || {};
+    const {_id,image,name,author_name,quantity,category,description} = books || {};
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">

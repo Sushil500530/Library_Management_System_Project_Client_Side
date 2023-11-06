@@ -19,7 +19,7 @@ const CategoryItem = ({ data }) => {
                 </div>
                 <h2 className="card-title">{name}</h2>
                 <h1 className="text-base font-semibold">Author Name: {author_name}</h1>
-                <p className="text-base font-semibold">Category: {category}</p>
+                <p className="text-base font-semibold capitalize">Category: {category}</p>
                 <p className="text-base font-semibold">Quantity: {quantity}</p>
                 <p>{description.slice(0, 90)}</p>
                 <Link to={`/book-details/${_id}`}>
