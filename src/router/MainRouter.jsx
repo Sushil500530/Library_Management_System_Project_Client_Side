@@ -11,6 +11,7 @@ import SingleBookDetails from '../pages/SingleBookDetails';
 import AllBooks from '../pages/AllBooks';
 import UpdatedBook from '../pages/UpdatedBook';
 import ErrorPage from '../pages/ErrorPage';
+import PrivetRouter from './PrivetRouter';
 
 const MainRouter = createBrowserRouter([
     {
@@ -24,15 +25,15 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'add-book',
-                element: <AddBook></AddBook>
+                element: <PrivetRouter><AddBook></AddBook></PrivetRouter>
             },
             {
                 path: 'all-books',
-                element: <AllBooks></AllBooks>
+                element: <PrivetRouter><AllBooks></AllBooks></PrivetRouter>
             },
             {
                 path: 'borrow-books',
-                element: <BorrowBooks></BorrowBooks>
+                element: <PrivetRouter><BorrowBooks></BorrowBooks></PrivetRouter>
             },
             {
                 path: 'login',
@@ -45,12 +46,12 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: '/book-details/:id',
-                element: <SingleBookDetails></SingleBookDetails>,
+                element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
             },
             {
                 path: "/updated-book/:id",
-                element: <UpdatedBook></UpdatedBook>,
+                element: <PrivetRouter><UpdatedBook></UpdatedBook></PrivetRouter>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
             }
         ]

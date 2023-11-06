@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const SingleBookDetails = () => {
     const bookDetails = useLoaderData();
@@ -28,7 +29,15 @@ const SingleBookDetails = () => {
          }
         console.log(borrowDoc);
         axios.post('http://localhost:5000/borrow-books', borrowDoc)
-        .then((res) => console.log(res.data))
+        .then((res) => {
+            if(res.data){
+                Swal.fire({
+                    title: "Borrow Successfully!",
+                    text: "check you borrow books!",
+                    icon: "success"
+                  });
+            }
+     })
     }
 
     const handleReturn = () => {
