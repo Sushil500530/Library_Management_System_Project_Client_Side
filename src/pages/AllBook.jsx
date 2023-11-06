@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const AllBook = ({books}) => {
-    console.log(Object.keys(books).join(','));
     const {_id,image,name,author_name,quantity,category,ratting,description} = books || {};
     return (
         <div>
@@ -23,7 +22,7 @@ const AllBook = ({books}) => {
                     <p className="text-base font-semibold capitalize">Category: {category}</p>
                     <p className="text-base font-semibold">Quantity: {quantity}</p>
                     <p>{description.slice(0,80)}</p>
-                    <Link to={`/updated/book/${_id}`}>
+                    <Link to={`/updated-book/${_id}`}>
                         <div className="card-actions">
                             <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Update Now</button>
                         </div>

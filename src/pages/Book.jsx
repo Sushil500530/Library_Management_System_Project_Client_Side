@@ -1,13 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import BookCategory from "./BookCategory";
+import useAxios from "../hooks/useAxios";
 
 const Book = () => {
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        axios.get('http://localhost:5000/book-category')
-            .then(res => setData(res.data))
-    }, [])
+    const {data} = useAxios()
     console.log(data);
     return (
        <div className="container mx-auto">

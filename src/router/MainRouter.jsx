@@ -9,6 +9,7 @@ import AddBook from '../pages/AddBook';
 import Category from '../pages/Category';
 import SingleBookDetails from '../pages/SingleBookDetails';
 import AllBooks from '../pages/AllBooks';
+import UpdatedBook from '../pages/UpdatedBook';
 
 const MainRouter = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'all-books',
-                element:<AllBooks></AllBooks>
+                element: <AllBooks></AllBooks>
             },
             {
                 path: 'borrow-books',
@@ -36,18 +37,19 @@ const MainRouter = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path:'/collection/:category',
-                element:<Category></Category>,
-                loader: ({params}) => fetch(`http://localhost:5000/category-collection/${params.category}`)
+                path: '/collection/:category',
+                element: <Category></Category>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/${params.category}`)
             },
             {
-                path:'/book-details/:id',
-                element:<SingleBookDetails></SingleBookDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
+                path: '/book-details/:id',
+                element: <SingleBookDetails></SingleBookDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
             },
             {
-                path:"/updated-book/:id",
-                element:<
+                path: "/updated-book/:id",
+                element: <UpdatedBook></UpdatedBook>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
             }
         ]
     },
