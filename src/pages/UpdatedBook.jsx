@@ -1,15 +1,40 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import useAxios from "../hooks/useAxios";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const UpdatedBook = () => {
     const { data: categories } = useAxios()
     const data = useLoaderData();
-    const { _id, image, name, author_name, quantity, category, ratting, description } = data || {};
-    const handleUpdated = (e) => {
+    const navigate = useNavigate();
+    const {_id, image, name, author_name, quantity, ratting, description } = data || {};
+    const handleUpdated = async(e) => {
         e.preventDefault();
-        console.log('updated book clicked');
+        const form = e.target;
+        const updateBook = {
+            name: form.name.value || "not to given",
+            image: form.imageUrl.value || "not to given",
+            author_name: form.athorName.value || "not to given",
+            quantity: form.quantity.value || "not to given",
+            category: form.category.value || "not to given",
+            description: form.description.value || "not to given",
+            ratting: form.ratting.value || "not to given",
+        }
+        console.log('updated book', updateBook);
+        const responeData = await axios.put(`http://localhost:5000/category-collection/drama/${_id}`, updateBook)
+        const data = await responeData.data;
+        console.log(data);
+        if(data.modifiedCount > 0) {
+            Swal.fire({
+                title: "Updated Successfully!",
+                text: "You clicked the button!",
+                icon: "success"
+              });
+            return navigate('/all-books')
+        }
+        
     }
     return (
         <div>
@@ -69,7 +94,7 @@ const UpdatedBook = () => {
                                     <span className="label-text">Short Description</span>
                                 </label>
                                 {/* <input type="text" name="description" defaultValue={description} className="input input-bordered" placeholder="description" required /> */}
-                                <textarea className="textarea textarea-bordered w-full h-[153px]" type="text" name="description" defaultValue={description} placeholder="description"></textarea>
+                                <textarea className="textarea textarea-bordered w-full" type="text" name="description" defaultValue={description.slice(0,80)} placeholder="description"></textarea>
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn bg-purple-500 border text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full" type="submit" value="Add Book" />
