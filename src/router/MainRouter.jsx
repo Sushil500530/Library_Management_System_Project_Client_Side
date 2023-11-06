@@ -5,10 +5,10 @@ import Login from '../pages/Login';
 import Header from '../components/header/Header';
 import BorrowBooks from '../pages/BorrowBooks';
 import Home from '../pages/Home';
-import PrivetRouter from './PrivetRouter';
 import AddBook from '../pages/AddBook';
 import Category from '../pages/Category';
 import SingleBookDetails from '../pages/SingleBookDetails';
+import AllBooks from '../pages/AllBooks';
 
 const MainRouter = createBrowserRouter([
     {
@@ -16,7 +16,7 @@ const MainRouter = createBrowserRouter([
         element: <Header></Header>,
         children: [
             {
-                path: '/',
+                index: true,
                 element: <Home></Home>
             },
             {
@@ -25,7 +25,7 @@ const MainRouter = createBrowserRouter([
             },
             {
                 path: 'all-books',
-                element: <PrivetRouter><BorrowBooks></BorrowBooks></PrivetRouter>
+                element:<AllBooks></AllBooks>
             },
             {
                 path: 'borrow-books',
@@ -44,6 +44,10 @@ const MainRouter = createBrowserRouter([
                 path:'/book-details/:id',
                 element:<SingleBookDetails></SingleBookDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
+            },
+            {
+                path:"/updated-book/:id",
+                element:<
             }
         ]
     },
