@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import gif from '../assets/image/Animation - 1699268202700.gif'
 import { Link } from "react-router-dom";
 
 const BookCategory = ({ bookCategory }) => {
@@ -13,7 +13,7 @@ const BookCategory = ({ bookCategory }) => {
                         <div className="flex flex-col items-center justify-center">
                             <h2 className="text-white font-bold my-2 capitalize text-3xl">{category}</h2>
                             <Link to={`/collection/${category}`}>
-                                <button className="btn text-2xl bg-purple-500 hover:text-purple-500 capitalize border-purple-500 text-white ">View More</button>
+                                <button className="btn text-2xl bg-purple-500 hover:text-purple-500 capitalize border-purple-500 text-white ">View More <img src={gif} className='w-12 h-10 text-white' alt="" /></button>
                             </Link>
                         </div>
                     </div>
