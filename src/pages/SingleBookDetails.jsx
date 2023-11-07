@@ -27,25 +27,7 @@ const SingleBookDetails = () => {
             email,
             date
          }
-        console.log(borrowDoc);
-        // fetch('http://localhost:5000/borrow-', {
-        //     method:"POST",
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body:JSON.stringify(borrowDoc)
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     if(data.insertedId){
-        //         Swal.fire({
-        //             icon: 'success',
-        //             title: 'Confirmation Successfully',
-        //             text: 'Your order has been successfully.',
-                   
-        //           })
-        //     }
-        // })
+        // console.log(borrowDoc);
         axios.post('http://localhost:5000/borrow-books', borrowDoc)
         .then((res) => {
             if(res.data.insertedId){

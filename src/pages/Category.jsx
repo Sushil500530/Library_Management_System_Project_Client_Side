@@ -6,11 +6,9 @@ const Category = () => {
     // console.log(Object.keys(dataCategory).join(','));
     console.log(dataCategory.length);
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto dark:text-white py-12">
             {
-                dataCategory?.slice(1, 2).map(collection => <h1 key={collection._id} className="text-5xl text-center font-bold capitalize py-8">
-                    {collection.category}
-                </h1>)
+                dataCategory?.slice(1, 2).map(collection => <h1 key={collection._id} className="text-5xl text-center font-bold pb-12">The Book of Categories is <span className="capitalize text-purple-500">{collection.category}</span></h1>)
             }
             {
                 dataCategory.length === 0 && <div className="w-full h-[60vh] flex items-center justify-center">
