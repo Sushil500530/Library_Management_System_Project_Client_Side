@@ -10,11 +10,11 @@ const SingleBookDetails = () => {
     const {user} = useAuth();
     const navigate = useNavigate();
     const [date,setDate] = useState('');
-    const { _id, image, name, author_name, quantity, category, ratting, description } = bookDetails || {};
+    const { image, name, author_name, category, description } = bookDetails || {};
 
     console.log(user);
     const userName = user?.displayName;
-    const userEmail = user?.email;
+    const email = user?.email;
     const handleBorrow = () => {
         if(!date){
             return toast.error('date is not defined! Please defined the date...!')
@@ -24,18 +24,37 @@ const SingleBookDetails = () => {
             image,
             category,
             userName,
-            userEmail,
+            email,
             date
          }
         console.log(borrowDoc);
+        // fetch('http://localhost:5000/borrow-', {
+        //     method:"POST",
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body:JSON.stringify(borrowDoc)
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //     if(data.insertedId){
+        //         Swal.fire({
+        //             icon: 'success',
+        //             title: 'Confirmation Successfully',
+        //             text: 'Your order has been successfully.',
+                   
+        //           })
+        //     }
+        // })
         axios.post('http://localhost:5000/borrow-books', borrowDoc)
         .then((res) => {
-            if(res.data){
+            if(res.data.insertedId){
                 Swal.fire({
                     title: "Borrow Successfully!",
                     text: "check you borrow books!",
                     icon: "success"
                   });
+                //   console.log(res.data);
             }
      })
     }
@@ -56,7 +75,6 @@ const SingleBookDetails = () => {
                         <h1 className="text-xl font-semibold">Author Name: <span className="text-2xl text-gray-500">{author_name}</span></h1>
                         <h1 className="text-xl font-semibold">Category Name: <span className="text-2xl text-gray-500 capitalize">{category}</span></h1>
                     </div>
-                    {/* */}
                     <p className="first-letter:text-7xl first-letter:text-purple-500 first-letter:font-bold">{description}</p>
                     <div>
                         <div className="flex gap-5">

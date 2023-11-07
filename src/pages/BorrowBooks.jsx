@@ -8,11 +8,14 @@ const BorrowBooks = () => {
     const {user} = useAuth();
     const [borrowing,setBorrowing] = useState([]);
     const url = `/borrow-books?email=${user?.email}`;
+    // const url = `/borrows?email=${user?.email}`;
     useEffect(() => {
         secureAxios?.get(url)
         .then(res => setBorrowing(res?.data))
     },[secureAxios,url])
-    console.log(borrowing, user);
+    console.log(borrowing);
+
+
     return (
         <div>
             <div className="container mx-auto pt-5 lg:pt-12 dark:text-white">

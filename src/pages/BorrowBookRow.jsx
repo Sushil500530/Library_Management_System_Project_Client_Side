@@ -5,14 +5,14 @@ import { useState } from "react";
 const BorrowBookRow = ({ borrowBook }) => {
     const { name, image, category, userName, userEmail, date } = borrowBook || {};
     const [returnDate,setReturnDate] = useState('');
-    console.log(date);
+    console.log(returnDate);
 
     return (
         <>
             <tr>
                 <td>
                     <div className="avatar">
-                        <div className="rounded w-24 h-24">
+                        <div className="rounded dark:border w-24 h-24">
                             <img src={image} alt="book image" />
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const BorrowBookRow = ({ borrowBook }) => {
                     <div className="modal-action">
                         <form method="dialog">
                             {/* if there is a button in form, it will close the modal */}
-                            <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in capitalize text-[18px] hover:text-purple-700 font-semibold w-full">Borrow</button>
+                            <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in capitalize text-[18px] hover:text-purple-700 font-semibold w-full">Return</button>
                         </form>
                     </div>
                 </div>
