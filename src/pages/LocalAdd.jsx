@@ -1,7 +1,10 @@
 import axios from "axios";
 import Footer from "./Footer";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const LocalAdd = () => {
+    const navigate = useNavigate();
     const handleAddBook = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -16,7 +19,16 @@ const LocalAdd = () => {
         }
         console.log(collectedBook);
         axios.post('http://localhost:5000/book-category', collectedBook)
-        .then(res => console.log(res.data))
+        .then(res => {
+            if(res.data?.insertedId){
+                Swal.fire({
+                    title: "Added Successfully!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
+                  return navigate('/')
+            }
+        })
     }
     return (
         <div>

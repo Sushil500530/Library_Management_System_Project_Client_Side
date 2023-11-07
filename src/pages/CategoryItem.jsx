@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const CategoryItem = ({ data }) => {
-    const { _id, image, name, author_name, quantity, category, ratting, description } = data || {};
+    const { _id, image, name, author_name, quantity, category, description } = data || {};
     return (
         <div className="card card-compact bg-base-100 dark:bg-zinc-900 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">
             <div className="w-full h-[250px] lg:h-[350px] rounded-md">
