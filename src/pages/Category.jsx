@@ -13,7 +13,7 @@ const Category = () => {
             {
                 dataCategory.length === 0 && <div className="w-full h-[60vh] flex items-center justify-center">
                     <p className="text-4xl font-bold">No Items Found</p>
-                    </div>
+                </div>
             }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {

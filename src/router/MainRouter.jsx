@@ -12,6 +12,7 @@ import AllBooks from '../pages/AllBooks';
 import UpdatedBook from '../pages/UpdatedBook';
 import ErrorPage from '../pages/ErrorPage';
 import PrivetRouter from './PrivetRouter';
+import LocalAdd from '../pages/LocalAdd';
 
 const MainRouter = createBrowserRouter([
     {
@@ -44,6 +45,23 @@ const MainRouter = createBrowserRouter([
                 element: <Category></Category>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category-collection/${params.category}`)
             },
+            // other collection
+            {
+                path: '/other-collection/:category',
+                element: <Category></Category>,
+                loader: ({ params }) => fetch(`http://localhost:5000/other-collection/${params.category}`)
+            },
+            // other id details 
+            {
+                path: '/book-details/:id',
+                element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
+                loader: ({ params }) => fetch(`http://localhost:5000/other-collection/drama/${params.id}`)
+            },
+            // {
+            //     path: "/updated-book/:id",
+            //     element: <PrivetRouter><UpdatedBook></UpdatedBook></PrivetRouter>,
+            //     loader: ({ params }) => fetch(`http://localhost:5000/other-collection/drama/${params.id}`)
+            // },
             {
                 path: '/book-details/:id',
                 element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
@@ -59,6 +77,10 @@ const MainRouter = createBrowserRouter([
     {
         path: '/resister',
         element: <Resister></Resister>
+    },
+    {
+        path: '/add-category-book',
+        element: <LocalAdd></LocalAdd>
     },
 
 ])
