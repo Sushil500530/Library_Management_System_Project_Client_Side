@@ -2,7 +2,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Resister from '../pages/Resister';
 import Login from '../pages/Login';
-import Header from '../components/header/Header';
 import BorrowBooks from '../pages/BorrowBooks';
 import Home from '../pages/Home';
 import AddBook from '../pages/AddBook';
@@ -13,12 +12,13 @@ import UpdatedBook from '../pages/UpdatedBook';
 import ErrorPage from '../pages/ErrorPage';
 import PrivetRouter from './PrivetRouter';
 import LocalAdd from '../pages/LocalAdd';
+import MainLayout from '../MainLayout';
 
 const MainRouter = createBrowserRouter([
     {
         path: '/',
         errorElement: <ErrorPage></ErrorPage>,
-        element: <Header></Header>,
+        element: <MainLayout></MainLayout>,
         children: [
             {
                 index: true,

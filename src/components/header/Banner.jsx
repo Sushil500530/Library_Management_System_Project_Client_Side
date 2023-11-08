@@ -10,8 +10,8 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold'>Library Management System</h2>
                             <p>There are many variations of Books of  available, but the majority have suffered in library</p>
                             <div className='text-white '>
-                                <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Discover More</button>
-                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Latest Project</button>
+                                <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Read More</button>
+                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Join Our Community</button>
                             </div>
                         </div>
                     </div>
@@ -27,8 +27,8 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold'>Books Management System</h2>
                             <p>There are many variations of Books of  available, but the majority have suffered in library</p>
                             <div className='text-white '>
-                                <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Discover More</button>
-                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Latest Project</button>
+                            <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Read More</button>
+                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Join Our Community</button>
                             </div>
                         </div>
                     </div>
@@ -44,8 +44,8 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold'>Library Management System</h2>
                             <p>There are many variations of Books of  available, but the majority have suffered in library</p>
                             <div className='text-white '>
-                                <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Discover More</button>
-                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Latest Project</button>
+                            <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Read More</button>
+                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Join Our Community</button>
                             </div>
                         </div>
                     </div>
@@ -61,8 +61,8 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold'>Book Category Management System</h2>
                             <p>There are many variations of Books of  available, but the majority have suffered in library</p>
                             <div className='text-white '>
-                                <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Discover More</button>
-                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Latest Project</button>
+                            <button className='btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize mr-5'>Read More</button>
+                                <button className='btn border-purple-500 text-white bg-transparent hover:border-purple-500 hover:text-black hover:bg-purple-500 transition ease-in text-[18px] font-semibold capitalize'>Join Our Community</button>
                             </div>
                         </div>
                     </div>

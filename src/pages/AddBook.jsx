@@ -1,5 +1,6 @@
 import axios from "axios";
 import Footer from "./Footer";
+import Swal from "sweetalert2";
 
 const AddBook = () => {
 
@@ -16,8 +17,16 @@ const AddBook = () => {
             ratting: form.ratting.value || "not to given",
         }
         console.log(collectedBook);
-        axios.post('http://localhost:5000/book-category', collectedBook)
-        .then(res => console.log(res.data))
+        axios.post('http://localhost:5000/category-collection', collectedBook)
+        .then(res => {
+            if(res.data?.insertedId){
+                Swal.fire({
+                    title: "Added Successfully!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
+            }
+        })
     }
     return (
         <div>
