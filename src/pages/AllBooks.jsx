@@ -6,7 +6,7 @@ import { useState } from "react";
 import Footer from "./Footer";
 
 const AllBooks = () => {
-    const { data: categories, isLoading } = useCategory();
+    const { data: categories, isLoading,isError } = useCategory();
     const [sort, setSort] = useState(categories);
     const {data} = useSortAxios();
 
@@ -25,6 +25,9 @@ const AllBooks = () => {
             width="96"
             visible={true}
         /></p>
+    }
+    if(isError){
+        return <p className="flex items-center justify-center w-full h-[50vh] text-2xl font-semibold dark:text-white">Something is Went Wrong.....<span className="text-red-600">!</span></p>
     }
     return (
        <div>
