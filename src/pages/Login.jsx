@@ -77,11 +77,7 @@ const Login = () => {
                         <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Login</button>
                         <h2 className="font-bold text-center">Don't have an account? <Link to='/resister' className="text-blue-600 hover:underline ">Create an account</Link></h2>
                     </form>
-                    <div className="inline-flex items-center justify-center w-full lg:hidden block">
-                        <hr className="w-64 h-px my-8 bg-gray-400 border-0 dark:bg-black" />
-                        <span className="absolute px-3 font-medium text-black -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-black">Or</span>
-                    </div>
-                    <p className='text-center hidden lg:block text-xl font-bold text-white'>Or</p>
+                    <div className="divider text-center text-xl font-bold text-white">Or, Continue With</div>
                     <div onClick={handleGoogleSignIn} className='w-full md:w-[466px] lg:w-full mx-auto p-5'>
                         <div className="border-2 mx-auto w-full lg:w-[400px] lg:h-[60px] hover:bg-gray-200 cursor-pointer hover:text-blue-500 transition ease-in rounded-full my-5 flex items-center justify-center gap-3">
                             <p className="text-[38px] p-2"><FcGoogle></FcGoogle></p>

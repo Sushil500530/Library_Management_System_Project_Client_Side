@@ -52,7 +52,11 @@ const Navbar = () => {
                                 Borrow Books
                             </NavLink>
                             {
-                                user?.email ? <div className="flex">
+                                user?.email ? <div className="flex items-center justify-center">
+                                    <NavLink to="/dashboard" className={({ isActive }) =>
+                                        isActive ? 'btn bg-purple-500 btn-sm hover:border text-white border-purple-500 hover:bg-transparent hover:border-purple-500 capitalize text-[18px]' : 'btn btn-ghost btn-sm hover:border hover:text-purple-500 hover:bg-transparent hover:border-purple-500 capitalize text-[18px]'}>
+                                       Dashboard
+                                    </NavLink>
                                     <div className="dropdown flex items-center justify-center dropdown-start lg:dropdown-end">
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar -mt-2">
                                             <div className="w-10 rounded-full">
@@ -62,21 +66,21 @@ const Navbar = () => {
                                             </div>
                                         </label>
                                         <ul tabIndex={0} className="menu menu-sm relative lg:-left-20 top-10 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-medium">
-                                                <NavLink to="/user" className="px-4 py-2 hover:bg-base-300 rounded-lg" >
+                                            <NavLink to="/user" className="px-4 py-2 hover:bg-base-300 rounded-lg" >
                                                 {
-                                                            user?.email && <p className="text-black">{user?.displayName}</p>
-                                                        }
-                                                    
-                                                </NavLink>
-                                                <NavLink to="/user/orders" className="px-4 py-2 hover:bg-base-300 rounded-lg">
+                                                    user?.email && <p className="text-black">{user?.displayName}</p>
+                                                }
+
+                                            </NavLink>
+                                            <NavLink to="/user/orders" className="px-4 py-2 hover:bg-base-300 rounded-lg">
                                                 Profile
-                                                </NavLink>
-                                                <div
-                                                    onClick={handleLogOut}
-                                                    className="cursor-pointer text-red-500 px-4 py-2 hover:bg-base-300 rounded-lg"
-                                                >
-                                                    Logout
-                                                </div>
+                                            </NavLink>
+                                            <div
+                                                onClick={handleLogOut}
+                                                className="cursor-pointer text-red-500 px-4 py-2 hover:bg-base-300 rounded-lg"
+                                            >
+                                                Logout
+                                            </div>
                                         </ul>
                                     </div>
                                     <button onClick={handleLogOut} className="btn bg-red-500 text-white border-none hover:text-black capitalize text-[18px] py-0 btn-sm">Louout</button>

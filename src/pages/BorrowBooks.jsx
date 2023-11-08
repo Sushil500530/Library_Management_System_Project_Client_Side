@@ -68,17 +68,17 @@ const BorrowBooks = () => {
                         <tbody className="font-semibold">
 
                             {
-                                    borrowing?.map(borrow => <BorrowBookRow
-                                        key={borrow._id}
-                                        handleReturnBook={handleReturnBook}
-                                        borrowBook={borrow}
-                                    ></BorrowBookRow>)
+                                borrowing?.map(borrow => <BorrowBookRow
+                                    key={borrow._id}
+                                    handleReturnBook={handleReturnBook}
+                                    borrowBook={borrow}
+                                ></BorrowBookRow>)
                             }
                         </tbody>
                     </table>
                     {
-                            borrowing.length === 0 && <div className="w-full h-[40vh] flex items-center justify-center">
-                            <p className="text-4xl font-bold">No Borrow Books Found</p>
+                        borrowing?.length === 0 && <div className="w-full h-[40vh] flex items-center justify-center">
+                            <p className="text-4xl font-bold text-black dark:text-white">No Borrow Books Found</p>
                         </div>
                     }
                 </div>

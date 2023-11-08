@@ -1,8 +1,10 @@
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
-
+import { AiFillStar } from 'react-icons/ai';
 // eslint-disable-next-line react/prop-types
 const AllBook = ({books}) => {
-    const {_id,image,name,author_name,quantity,category} = books || {};
+    const {_id,image,name,author_name,quantity,category,ratting} = books || {};
+    console.log(books);
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 dark:bg-zinc-800 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">
@@ -10,13 +12,12 @@ const AllBook = ({books}) => {
                     <img src={image} alt="image" className="w-full h-full rounded-md" />
                 </div>
                 <div className="card-body">
-                    <div className="rating">
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-orange-400" checked />
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-orange-400" />
-                    </div>
+                <Rating 
+                    placeholderRating={`${ratting}`}
+                    readonly
+                    placeholderSymbol={<AiFillStar className="text-amber-400 w-7 h-7 icon"></AiFillStar>}
+                    fullSymbol={<AiFillStar className="text-amber-400 w-7 h-7 icon"></AiFillStar>}
+                />
                     <h2 className="card-title">{name}</h2>
                     <h1 className="text-base font-semibold">Author Name: {author_name}</h1>
                     <p className="text-base font-semibold capitalize">Category: {category}</p>

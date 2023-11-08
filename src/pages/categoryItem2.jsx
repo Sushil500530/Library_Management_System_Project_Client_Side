@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar } from "react-icons/ai";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
+
 
 // eslint-disable-next-line react/prop-types
-const CategoryItem = ({ data }) => {
+const CategoryItem2 = ({ data }) => {
     const { _id, image, name, author_name, quantity, category, description } = data || {};
     return (
         <div className="card card-compact bg-base-100 dark:bg-zinc-900 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">
@@ -11,7 +12,7 @@ const CategoryItem = ({ data }) => {
                 <img src={image} alt="image" className="w-full h-[250px] lg:h-[350px] rounded-md" />
             </div>
             <div className="card-body">
-                <Rating
+            <Rating 
                     placeholderRating={4}
                     readonly
                     placeholderSymbol={<AiFillStar className="text-amber-400 w-7 h-7 icon"></AiFillStar>}
@@ -22,7 +23,7 @@ const CategoryItem = ({ data }) => {
                 <p className="text-base font-semibold capitalize">Category: {category}</p>
                 <p className="text-base font-semibold">Quantity: {quantity}</p>
                 <p>{description.slice(0, 90)}</p>
-                <Link to={`/book-details/${_id}`}>
+                <Link to={`/other-details/${_id}`}>
                     <div className="card-actions">
                         <button className="btn bg-purple-500 border-purple-500 text-white hover:border-purple-500 hover:bg-transparent transition ease-in text-[18px] hover:text-purple-700 font-semibold capitalize w-full">Show Details</button>
                     </div>
@@ -32,4 +33,4 @@ const CategoryItem = ({ data }) => {
     );
 };
 
-export default CategoryItem;
+export default CategoryItem2;
