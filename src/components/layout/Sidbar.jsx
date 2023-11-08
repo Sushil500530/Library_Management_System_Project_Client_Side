@@ -22,7 +22,7 @@ const Sidbar = () => {
         {/* Navbar menu content here */}
    
                     {/* Navbar menu content here */}
-                    <button onClick={changeTheme} className="bg-transparent btn-sm hover:text-blue-500 transition ">
+                    <button onClick={changeTheme} className="bg-transparent btn-sm hover:text-blue-500 transition flex items-center justify-center ">
                         {mode === "dark" ? <BsSun className='text-3xl'></BsSun> : <MdOutlineDarkMode className='text-3xl'></MdOutlineDarkMode>}
                     </button>
                     <NavLink to="/" className={({ isActive }) =>
@@ -42,7 +42,7 @@ const Sidbar = () => {
                         Borrow Books
                     </NavLink>
                     {
-                        user?.email ? <div className="flex">
+                        user?.email ? <div className="flex items-center justify-center">
                             <div className="dropdown flex items-center justify-center dropdown-start lg:dropdown-end">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar -mt-2">
                                     <div className="w-10 rounded-full">

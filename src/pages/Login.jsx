@@ -50,7 +50,7 @@ const Login = () => {
                 <div className="w-full h-[550px] lg:w-1/2 p-5">
                     <img src={sidePhoto} className="w-full h-full rounded-md" alt="" />
                 </div>
-                <div className=" w-full lg:w-1/3 mx-auto mt-12 pb-5 border-2 pt-8 border-purple-500 rounded-md">
+                <div className=" w-full lg:w-1/3 mx-auto mt-12 pb-5 border-2 pt-8 border-purple-500 rounded-md m-5">
                     <form onSubmit={handleLoign} className="space-y-8 p-5">
                         <label className="text-xl font-bold my-5">Email
                             <input type="email" name="email"  onBlur={(e) => setEmail(e.target.value)} required className="px-3 input-bordered py-2 text-black input block w-full text-[18px]  my-3 text-base font-normal" placeholder="Enter your email" />

@@ -32,7 +32,7 @@ const Navbar = () => {
                     <div className="flex-none hidden lg:block">
                         <div className="flex items-center gap-2 dark:text-white">
                             {/* Navbar menu content here */}
-                            <button onClick={changeTheme} className="bg-transparent btn-sm hover:text-blue-500 transition ">
+                            <button onClick={changeTheme} className="bg-transparent btn-sm hover:text-blue-500 transition flex items-center justify-center">
                                 {mode === "dark" ? <BsSun className='text-3xl'></BsSun> : <MdOutlineDarkMode className='text-3xl'></MdOutlineDarkMode>}
                             </button>
                             <NavLink to="/" className={({ isActive }) =>
