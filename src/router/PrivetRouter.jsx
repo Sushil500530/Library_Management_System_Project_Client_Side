@@ -6,7 +6,7 @@ import { RotatingLines } from "react-loader-spinner";
 const PrivetRouter = ({children}) => {
     const {user,isLoading} = useAuth();
     const location = useLocation();
-    console.log(user);
+    // console.log(user);
     if(isLoading){
         return <p className="flex items-center justify-center w-full h-[50vh]"><RotatingLines
         strokeColor="purple"

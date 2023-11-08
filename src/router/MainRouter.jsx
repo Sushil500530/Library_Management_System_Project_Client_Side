@@ -49,39 +49,39 @@ const MainRouter = createBrowserRouter([
             {
                 path: '/collection/:category',
                 element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/${params.category}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/category-collection/${params.category}`)
             },
             {
                 path: '/book-details/:id',
                 element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/category-collection/drama/${params.id}`)
             },
             // other collection
             {
                 path: '/other-collection/:category',
                 element: <Category2></Category2>,
-                loader: ({ params }) => fetch(`http://localhost:5000/other-collection/${params.category}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/other-collection/${params.category}`)
             },
             // other id details 
             {
                 path: '/other-details/:id',
                 element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/other-collection/drama/${params.id}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/other-collection/drama/${params.id}`)
             },
             // {
             //     path: "/updated-book/:id",
             //     element: <PrivetRouter><UpdatedBook></UpdatedBook></PrivetRouter>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/other-collection/drama/${params.id}`)
+            //     loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/other-collection/drama/${params.id}`)
             // },
             {
                 path: '/category-details/:id',
                 element: <PrivetRouter><SingleBookDetails></SingleBookDetails></PrivetRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/category-collection/drama/${params.id}`)
             },
             {
                 path: "/updated-book/:id",
                 element: <PrivetRouter><UpdatedBook></UpdatedBook></PrivetRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category-collection/drama/${params.id}`)
+                loader: ({ params }) => fetch(`https://assign-project-server-side.vercel.app/category-collection/drama/${params.id}`)
             }
         ]
     },
@@ -99,23 +99,23 @@ const MainRouter = createBrowserRouter([
         children:[
             {
                 path:"/dashboard",
-                element:<div className='text-3xl font-bold text-center text-purple-500'>Dashboard</div>
+                element:<PrivetRouter><div className='text-3xl font-bold text-center text-purple-500'>Dashboard</div></PrivetRouter>
             },
             {
                 path:"/dashboard/my-book",
-                element:<MyBook></MyBook>
+                element:<PrivetRouter><MyBook></MyBook></PrivetRouter>
             },
             {
                 path:"/dashboard/add-book",
-                element:<AddDashboardBook></AddDashboardBook>
+                element:<PrivetRouter><AddDashboardBook></AddDashboardBook></PrivetRouter>
             },
             {
                 path:"/dashboard/update-book",
-                element:<UpdateDashboardBook></UpdateDashboardBook>
+                element:<PrivetRouter><UpdateDashboardBook></UpdateDashboardBook></PrivetRouter>
             },
             {
                 path:"/dashboard/manage-book",
-                element:<ManagBook></ManagBook>
+                element:<PrivetRouter><ManagBook></ManagBook></PrivetRouter>
             },
            
         ]

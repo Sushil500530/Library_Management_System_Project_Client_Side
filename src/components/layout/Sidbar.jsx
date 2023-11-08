@@ -8,7 +8,7 @@ import { MdOutlineDarkMode } from 'react-icons/md';
 const Sidbar = () => {
     const { user, userLogOut } = useAuth();
     const { changeTheme, mode } = useThemeMode();
-    console.log(user);
+    // console.log(user);
 
     const handleLogOut = () => {
         userLogOut()

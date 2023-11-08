@@ -26,7 +26,7 @@ const BorrowBooks = () => {
             confirmButtonText: 'Yes, Return it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/borrow-books/${_id}`, {
+                fetch(`https://assign-project-server-side.vercel.app/borrow-books/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

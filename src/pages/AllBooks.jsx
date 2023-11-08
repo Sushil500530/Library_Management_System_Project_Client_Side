@@ -14,8 +14,8 @@ const AllBooks = () => {
     const handleSorted =async(e) => {
         e.preventDefault();
         // console.log(sort);
-        const name = e.target.name.value;
-        console.log(name);
+        // const name = e.target.name.value;
+        // console.log(name);
     }
     if (isLoading == true) {
         return <p className="flex items-center justify-center w-full h-[50vh]"><RotatingLines

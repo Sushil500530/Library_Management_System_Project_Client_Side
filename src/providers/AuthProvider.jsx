@@ -31,19 +31,22 @@ const AuthProvider = ({children}) => {
     }
     useEffect(() => {
         const unSubcriber = onAuthStateChanged(auth,currentUser => {
+
+            // http://localhost:5000
             setIsLoading(false);
             const emailInUser = currentUser?.email || user?.email ;
             const loggedUserEmail = {email : emailInUser}
             setUser(currentUser);
-            console.log('current user is--->', loggedUserEmail);
+            // console.log('current user is--->', loggedUserEmail);
             if(currentUser){
-                axios.post('http://localhost:5000/jwt', loggedUserEmail, {withCredentials:true})
-                .then(res => {
-                    console.log('token in user--->', res.data);
+                axios.post('https://assign-project-server-side.vercel.app/jwt', loggedUserEmail,
+                {withCredentials:true})
+                .then(() => {
+                    // console.log('token in user--->', res.data);
                 })
             }
             else{
-                axios.post('http://localhost:5000/logout', loggedUserEmail, {withCredentials:true})
+                axios.post('https://assign-project-server-side.vercel.app/logout', loggedUserEmail, {withCredentials:true})
                 .then(res => console.log(res.data))
             }
 

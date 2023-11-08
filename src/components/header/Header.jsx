@@ -20,7 +20,7 @@ const Header = ({ children }) => {
                     aria-label="close sidebar"
                     className="drawer-overlay"
                 ></label>
-                <div className="menu p-4 w-80 min-h-full py-2">
+                <div className="menu p-4 w-80 min-h-full py-2 bg-white">
                     {/* Sidebar content here */}
                     <Sidbar></Sidbar>
                 </div>

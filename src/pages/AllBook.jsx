@@ -4,7 +4,7 @@ import { AiFillStar } from 'react-icons/ai';
 // eslint-disable-next-line react/prop-types
 const AllBook = ({books}) => {
     const {_id,image,name,author_name,quantity,category,ratting} = books || {};
-    console.log(books);
+    // console.log(books);
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 dark:bg-zinc-800 shadow-xl p-5 m-5 lg:p-5 lg:m-0 border">

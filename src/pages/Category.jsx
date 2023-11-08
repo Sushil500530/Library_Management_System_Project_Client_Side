@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const Category = () => {
     const dataCategory = useLoaderData();
     // console.log(Object.keys(dataCategory).join(','));
-    console.log(dataCategory.length);
+    // console.log(dataCategory.length);
     return (
         <div>
             <div className="container mx-auto dark:text-white py-12">

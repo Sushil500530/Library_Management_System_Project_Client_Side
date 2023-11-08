@@ -12,7 +12,7 @@ const SingleBookDetails = () => {
     const [date,setDate] = useState('');
     const { image, name, author_name, category, description } = bookDetails || {};
 
-    console.log(user);
+    // console.log(user);
     const userName = user?.displayName;
     const email = user?.email;
     const handleBorrow = () => {
@@ -28,7 +28,7 @@ const SingleBookDetails = () => {
             date
          }
         // console.log(borrowDoc);
-        axios.post('http://localhost:5000/borrow-books', borrowDoc)
+        axios.post('https://assign-project-server-side.vercel.app/borrow-books', borrowDoc)
         .then((res) => {
             if(res.data.insertedId){
                 Swal.fire({

@@ -18,7 +18,7 @@ const LocalAdd = () => {
             ratting: form.ratting.value || "not to given",
         }
         console.log(collectedBook);
-        axios.post('http://localhost:5000/book-category', collectedBook)
+        axios.post('https://assign-project-server-side.vercel.app/book-category', collectedBook)
         .then(res => {
             if(res.data?.insertedId){
                 Swal.fire({
