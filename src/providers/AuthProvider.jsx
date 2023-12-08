@@ -31,8 +31,7 @@ const AuthProvider = ({children}) => {
     }
     useEffect(() => {
         const unSubcriber = onAuthStateChanged(auth,currentUser => {
-
-            // http://localhost:5000
+            // https://assign-project-server-side.vercel.app
             setIsLoading(false);
             const emailInUser = currentUser?.email || user?.email ;
             const loggedUserEmail = {email : emailInUser}

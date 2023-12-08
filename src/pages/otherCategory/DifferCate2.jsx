@@ -8,7 +8,7 @@ const DifferCate2 = () => {
     return (
         <div className="container mx-auto">
             <h1 className="text-2xl lg:text-4xl font-bold text-center my-8">Latest Type Book Of Category</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-7 pb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-7 pb-12 m-5">
                 {
                     exData?.map(data => <div key={data._id} className=" bg-gray-50 my-5 cursor-pointer shodow overflow-hidden dark:rounded-md rounded-md">
                         <div className="relative group h-[350px]">

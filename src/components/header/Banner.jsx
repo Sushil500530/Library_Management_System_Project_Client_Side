@@ -2,11 +2,11 @@
 const Banner = () => {
     return (
         <div className="container mx-auto pt-12">
-            <div className="carousel w-full h-[650px]">
+            <div className="carousel h-[650px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src='https://i.ibb.co/74gbJFw/77cc55a50508eb8c68f680f200640a83.jpg' className="w-full rounded-lg" />
-                    <div className="absolute w-full h-full bottom-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00) 100%)] flex items-center justify-start pl-32">
-                        <div className='text-white space-y-7 w-1/2'>
+                    <div className="h-full w-auto absolute bottom-0 rounded-lg bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00) 100%)] flex items-center justify-start pl-32">
+                        <div className='text-white space-y-7 lg:w-1/2'>
                             <h2 className='text-6xl font-bold'>Library Management System</h2>
                             <p>There are many variations of Books of  available, but the majority have suffered in library</p>
                             <div className='text-white '>

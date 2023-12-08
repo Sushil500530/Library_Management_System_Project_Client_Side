@@ -76,7 +76,7 @@ const UpdatedBook = () => {
                                     <select className="input input-bordered" name="category" id="">
                                         {categories?.map((category) => (
                                             <option className=""
-                                                key={categories._id} defaultValue={category.category}>
+                                                key={categories._id} defaultValue={category?.category}>
                                                 {category.category}
                                             </option>
                                         ))}

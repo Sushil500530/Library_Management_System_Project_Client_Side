@@ -9,7 +9,7 @@ import DifferCate2 from "./otherCategory/DifferCate2";
 const Home = () => {
     return (
         <div>
-            <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-auto bg-fixed">
+            <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] dark:bg-transparent bg-fixed bg-no-repeat bg-blend-overlay bg-cover">
                 <Banner></Banner>
                 <Book />
                 <Collection></Collection>

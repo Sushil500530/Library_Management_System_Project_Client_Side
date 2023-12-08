@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
 
-const secureAxios = axios.create({
+export const secureAxios = axios.create({
     baseURL: 'https://assign-project-server-side.vercel.app',
     withCredentials: true,
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate();
-    const { userLogOut } = useAuth()
+    const { userLogOut } = useAuth();
     useEffect(() => {
         secureAxios?.interceptors?.response?.use(res => {
             return res;

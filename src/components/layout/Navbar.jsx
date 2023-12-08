@@ -19,8 +19,8 @@ const Navbar = () => {
     return (
         <div className=" w-full dark:bg-zinc-900">
             {/* Navbar */}
-            <nav className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] dark:bg-transparent bg-fixed bg-no-repeat bg-blend-overlay bg-cover w-full">
-                <div className="navbar lg:container lg:mx-auto flex flex-row-reverse lg:flex-row justify-between">
+            <nav className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] dark:bg-transparent bg-fixed bg-no-repeat bg-blend-overlay bg-cover">
+                <div className="navbar container mx-auto lg:flex-row flex flex-row-reverse  justify-between">
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </div>
-    );
+    )
 };
 
 export default Navbar;
