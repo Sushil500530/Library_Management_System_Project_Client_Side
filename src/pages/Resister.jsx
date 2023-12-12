@@ -54,7 +54,7 @@ const Resister = () => {
         console.log('document of', name,email,password);
     }
     return (
-        <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1400px] lg:h-screen">
+        <div className="bg-[url('https://i.ibb.co/jffJC3v/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1400px] lg:h-screen">
             <div className=" w-full h-screen py-12">
             <h3 className="text-2xl font-semibold text-black lg:text-white text-center pb-12">Please Resister Now</h3>
                 <div className='container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-0 md:flex-col lg:flex-row'>

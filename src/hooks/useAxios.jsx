@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 const useAxios = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('https://assign-project-server-side.vercel.app/book-category')
+        axios.get('http://localhost:5000/book-category')
             .then(res => setData(res.data))
     }, [])
     return {data}

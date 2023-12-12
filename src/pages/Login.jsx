@@ -43,7 +43,7 @@ const Login = () => {
         })
     }
     return (
-        <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1800px] md:h-[1600px] lg:h-[90vh] bg-fixed">
+        <div className="bg-[url('https://i.ibb.co/jffJC3v/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1800px] md:h-[1600px] lg:h-[90vh] bg-fixed">
         <div className=" w-full">
         <h3 className="text-2xl font-semibold pt-8 text-center pb-12 lg:pb-5">Please <span className='text-purple-500 font-bold text-4xl'>Login</span> Now</h3>
             <div className='container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-0 md:flex-col lg:flex-row'>

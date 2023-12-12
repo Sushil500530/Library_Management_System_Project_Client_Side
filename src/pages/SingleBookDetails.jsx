@@ -28,7 +28,7 @@ const SingleBookDetails = () => {
             date
          }
         // console.log(borrowDoc);
-        axios.post('https://assign-project-server-side.vercel.app/borrow-books', borrowDoc)
+        axios.post('http://localhost:5000/borrow-books', borrowDoc)
         .then((res) => {
             if(res.data.insertedId){
                 Swal.fire({

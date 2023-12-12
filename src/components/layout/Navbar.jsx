@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div className=" w-full dark:bg-zinc-900">
             {/* Navbar */}
-            <nav className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] dark:bg-transparent bg-fixed bg-no-repeat bg-blend-overlay bg-cover">
+            <nav className="bg-[url('https://i.ibb.co/jffJC3v/cool-background.png')] dark:bg-transparent bg-fixed bg-no-repeat bg-blend-overlay bg-cover">
                 <div className="navbar container mx-auto lg:flex-row flex flex-row-reverse  justify-between">
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">

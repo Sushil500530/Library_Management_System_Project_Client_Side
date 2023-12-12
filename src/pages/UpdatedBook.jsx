@@ -23,7 +23,7 @@ const UpdatedBook = () => {
             ratting: form.ratting.value || "not to given",
         }
         console.log('updated book', updateBook);
-        const responeData = await axios.put(`https://assign-project-server-side.vercel.app/category-collection/drama/${_id}`, updateBook)
+        const responeData = await axios.put(`http://localhost:5000/category-collection/drama/${_id}`, updateBook)
         const data = await responeData.data;
         console.log(data);
         if (data.modifiedCount > 0) {

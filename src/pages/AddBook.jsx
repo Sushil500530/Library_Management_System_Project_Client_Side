@@ -17,7 +17,7 @@ const AddBook = () => {
             ratting: form.ratting.value || "not to given",
         }
         console.log(collectedBook);
-        axios.post('https://assign-project-server-side.vercel.app/category-collection', collectedBook)
+        axios.post('http://localhost:5000/category-collection', collectedBook)
         .then(res => {
             if(res.data?.insertedId){
                 Swal.fire({
@@ -30,7 +30,7 @@ const AddBook = () => {
     }
     return (
         <div>
-            <div className="bg-[url('https://i.ibb.co/t2NVRzQ/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1100px] md:h-[760px] lg:h-[90vh] bg-fixed">
+            <div className="bg-[url('https://i.ibb.co/jffJC3v/cool-background.png')] bg-no-repeat bg-blend-overlay bg-cover w-full h-[1100px] md:h-[760px] lg:h-[90vh] bg-fixed">
                 <h3 className="text-center lg:text-white py-8 text-3xl font-bold">Give Your <span className='text-purple-500 font-bold'>Add Book</span> Information.... <span className="text-4xl font-bold text-purple-500">!</span></h3>
                 <div className="pt-5">
                     <div className="lg:w-1/2 w-full mx-auto shadow-lg bg-blue-50">

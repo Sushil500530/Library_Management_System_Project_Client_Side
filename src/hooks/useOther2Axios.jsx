@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useOther2Axios = () => {
     const [exData, setExData] = useState([]);
     useEffect(() => {
-        axios.get('https://assign-project-server-side.vercel.app/other2-category')
+        axios.get('http://localhost:5000/other2-category')
             .then(res => setExData(res.data))
     }, [])
     return {exData}

@@ -4,7 +4,7 @@ const useOtherCategory = () => {
     const {data,isLoading,isFetching,refetch} = useQuery({
         queryKey:["category"],
         queryFn: async () => {
-            const data = await fetch('https://assign-project-server-side.vercel.app/category-collection');
+            const data = await fetch('http://localhost:5000/category-collection');
             return await data.json();
         }
     })
