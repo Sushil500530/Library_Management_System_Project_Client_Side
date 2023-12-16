@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Book = () => {
     const { data } = useAxios()
+
     // console.log(data);
     return (
         <div className="container mx-auto py-12">

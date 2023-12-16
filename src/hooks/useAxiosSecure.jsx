@@ -6,7 +6,7 @@ import useAuth from "./useAuth";
 
 
 export const secureAxios = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://assign-project-server-side.vercel.app',
     withCredentials: true,
 })
 const useAxiosSecure = () => {

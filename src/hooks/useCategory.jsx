@@ -4,7 +4,7 @@ const useCategory = (asc) => {
     const { data, isLoading, isFetching, refetch,isError } = useQuery({
         queryKey: ["category"],
         queryFn: async () => {
-            const data = await fetch(`http://localhost:5000/category-collection?sortField=quantity&sortOrder=${asc ? 'asc' : 'desc'}`);
+            const data = await fetch(`https://assign-project-server-side.vercel.app/category-collection?sortField=quantity&sortOrder=${asc ? 'asc' : 'desc'}`);
             return await data.json();
         }
     })
